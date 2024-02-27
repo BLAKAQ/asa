@@ -46,10 +46,7 @@ async def ahmad(client: Client, message: Message):
             ]
         ),
     )
-@app.on_message(
-    command(["المطور","مطور السورس","مطور"])
-    & ~filters.edited
-)
+@app.on_message(command(["مطور","السورس","سورس","المطور"]))
 async def huhh(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://telegra.ph/file/bd4a8c4bf9ad5f107a3d3.jpg",
