@@ -46,16 +46,26 @@ async def ahmad(client: Client, message: Message):
             ]
         ),
     )
-@app.on_message(command(["مطور","السورس","سورس","المطور"]))
-async def ahmad(client: Client, message: Message):
-    await message.reply_text(f"- 𝐒ᴏụʀᴄᴇ 𝐃ᴇᴠᴇʟᴏᴘᴇʀ: @A1DIIU 🧑‍💻",
+@app.on_message(
+    command(["المطور","مطور السورس","مطور"])
+    & ~filters.edited
+)
+async def huhh(client: Client, message: Message):
+    await message.reply_photo(
+        photo=f"https://telegra.ph/file/bd4a8c4bf9ad5f107a3d3.jpg",
+        caption=f"""**⩹━★⊷━⌞𝐋𝐈𝐓𝐇𝐎𝐍 ⌝━⊶★━⩺**\nمرحبا بك عزيزي {message.from_user.mention} في قسم المطور مرتجل ميوزك\nللتحدث مع مطور السورس اضغط علي الازرار بالاسفل👇\n**⩹━★⊷━⌞ 🔱 𝐒𝐎𝐔𝐑𝐂𝐄 • 𝐒𝐀 🔱 ⌝━⊶★━⩺**""",
         reply_markup=InlineKeyboardMarkup(
-        [
             [
-                InlineKeyboardButton("𝐋𝐄𝐀𝐃𝐄𝐑 𝐒𝐀𝐃𝐃𝐀𝐌 𝐇𝐔𝐒𝐒𝐄𝐈𝐍", user_id=6813691597),
-        
-                InlineKeyboardButton("ميوزك اغاني 𝅘𝅥𝅮", url="https://t.me/A1DIIU"),
-            ],
+                [
+                    InlineKeyboardButton(
+                        "𝐋𝐄𝐀𝐃𝐄𝐑 𝐒𝐀𝐃𝐃𝐀𝐌 𝐇𝐔𝐒𝐒𝐄𝐈𝐍", url=f"https://t.me/S_1_02"), 
+                 ],[
+                   InlineKeyboardButton(
+                        "★⌞𝐋𝐈𝐓𝐇𝐎𝐍⌝⚡", url=f"https://t.me/A1DIIU"),
+                ],
+
             ]
+
         ),
+
     )
